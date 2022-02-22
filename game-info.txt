@@ -1,0 +1,23 @@
+the "object" of the game is for you, '@', to travel through the rooms, 
+collecting coins, '$'. the coins can be used for the tolls which you must pay 
+when moving into another room, and to buy food, which replenishes your energy. 
+
+energy: 
+your energy starts at 10, and when it reaches 0, the game ends. each food item
+costs 2 coins and gives you 2 energy levels.  
+
+   press b to buy food.
+
+movement:
+
+   press w to move up. 
+   press s to move down. 
+   press a to move left. 
+   press d to move right. 
+
+other keys:
+
+   press h for help. 
+   press q to quit.
+
+press enter to continue...

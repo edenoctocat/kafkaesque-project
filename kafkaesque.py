@@ -12,7 +12,7 @@ class Room:
 		self.level = level
 		self.entrance = entrance
 		self.field = [['. ' for x in range(self.width)] for y in range(self.height)]
-		self.exit = random.choice([[0, 2], [0, 6], [0, 12], [1, 14], [5, 14], [9, 4], [9, 8], [9, 10], [3, 0], [7, 0]])
+		self.exit = random.choice([[0, 2], [0, 6], [0, 12], [2, 14], [6, 14], [9, 4], [9, 8], [9, 10], [4, 0], [8, 0]])
 		self.coins = 0
 		self.energy = 100
 		self.toll = False
@@ -59,11 +59,12 @@ class Room:
 			self.entrance = [self.exit[0], 14]
 		elif self.exit[1] == 14: 
 			self.entrance = [self.exit[0], 0]
-		self.exit = random.choice([[0, 2], [0, 5], [0, 6], [0, 8], [1, 14], [3, 14], [4, 14], [6, 14], [9, 2], [9, 6], [9, 9]])
+		self.exit = random.choice([[0, 2], [0, 6], [0, 12], [2, 14], [6, 14], [9, 4], [9, 8], [9, 10], [4, 0], [8, 0]])
 		self.field = [['. ' for x in range(self.width)] for y in range(self.height)]
 		self.generate_field()
 		self.generate_coins()
 		char_position = list(self.entrance)
+		print(self.entrance, self.exit)
 		return char_position
 
 	def render(self, char_position, char_prev_position):
@@ -168,7 +169,7 @@ def main():
 			print('\npress w to move up. \npress s to move down. \npress a to move left. \npress d to move right. \n\npress b to buy food. \npress q to quit.')
 
 		elif ch == 'b':
-			tobuy = input('would you like to buy more food? ')
+			tobuy = input('would you like to buy some food? ')
 			if tobuy == 'ok' or tobuy == 'yes' or tobuy == 'y':
 				print('\neach food item costs 2 coins and restores 2 energy')
 				howmany = int(input('\nhow many food items would you like to buy? '))
